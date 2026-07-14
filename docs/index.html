@@ -154,7 +154,7 @@ h1 em{color:var(--gold);font-style:normal;}
 }
 /* gold accent line under photo */
 .photo-frame::after{
-  content:'Video Editor · Content Producer';
+  content:'UGC & Ad Editor · Content Producer';
   position:absolute;bottom:-36px;left:0;right:0;
   text-align:center;
   font-size:11px;font-weight:700;letter-spacing:0.12em;
@@ -251,6 +251,56 @@ section{padding:90px 0}
   border:1px solid var(--border);
   padding:3px 9px;border-radius:3px;
 }
+
+/* ── UGC / AD PROJECT (60% black) ── */
+#ugc{background:var(--bg)}
+.ugc-grid{display:flex}
+.ugc-card{
+  background:var(--card-on-bg);border:1px solid var(--border-on-bg);
+  border-radius:var(--radius);padding:32px;max-width:760px;
+}
+.ugc-head{
+  display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;
+  margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-on-bg);
+}
+.ugc-name{font-size:20px;font-weight:800;color:var(--white)}
+.ugc-tag{font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.08em}
+.ugc-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
+.ugc-list li{font-size:14px;color:var(--light);line-height:1.7;padding-left:18px;position:relative}
+.ugc-list li::before{
+  content:'';position:absolute;left:0;top:9px;
+  width:6px;height:6px;border-radius:50%;background:var(--gold);
+}
+.ugc-tools{display:flex;flex-wrap:wrap;gap:6px}
+
+/* ── EXPERIENCE / EDUCATION / PROJECTS (30% navy) ── */
+#experience{background:var(--surface)}
+.exp-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:start;margin-bottom:52px}
+.exp-block{
+  background:rgba(0,0,0,0.25);border:1px solid var(--border);
+  border-radius:var(--radius);padding:28px;
+}
+.exp-role{font-size:17px;font-weight:800;color:var(--white);margin-bottom:4px}
+.exp-org{font-size:13px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px}
+.exp-date{font-size:12px;color:var(--muted);margin-bottom:18px}
+.exp-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.exp-list li{font-size:14px;color:var(--light);line-height:1.7;padding-left:16px;position:relative}
+.exp-list li::before{
+  content:'';position:absolute;left:0;top:8px;
+  width:5px;height:5px;border-radius:50%;background:var(--gold);
+}
+.edu-col{display:flex;flex-direction:column;gap:20px}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.proj-card{
+  background:rgba(0,0,0,0.25);border:1px solid var(--border);
+  border-radius:var(--radius);padding:24px;transition:var(--tr);
+}
+.proj-card:hover{border-color:var(--gold)}
+.proj-name{font-size:16px;font-weight:800;color:var(--white);margin-bottom:4px}
+.proj-tag{font-size:11px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:12px}
+.proj-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:14px}
+.proj-link{font-size:12px;font-weight:700;color:var(--gold)}
+.proj-link:hover{color:var(--white)}
 
 /* ── FEATURED (30% navy) ── */
 #featured{background:var(--surface)}
@@ -394,7 +444,7 @@ footer span{color:var(--gold)}
 @media(max-width:860px){
   .hero-inner{grid-template-columns:1fr}
   .hero-photo-col{display:none}
-  .about-grid,.tech-grid{grid-template-columns:1fr;gap:36px}
+  .about-grid,.tech-grid,.exp-grid{grid-template-columns:1fr;gap:36px}
   .nav-links{display:none}
   section{padding:64px 0}
 }
@@ -408,10 +458,11 @@ footer span{color:var(--gold)}
     <div class="logo">Ciddy<span>.</span></div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#ugc">UGC/Ads</a></li>
       <li><a href="#channels">Channels</a></li>
       <li><a href="#featured">Work</a></li>
-      <li><a href="#workflow">Process</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -423,21 +474,21 @@ footer span{color:var(--gold)}
     <div class="hero-inner">
 
       <div class="hero-text">
-        <div class="eyebrow">Video Editor &amp; Content Producer</div>
-        <h1>Video Editor.<br>Content Producer.<br><em>Storyteller.</em></h1>
-        <p class="hero-sub">YouTube · Storytelling · Creative Systems</p>
+        <div class="eyebrow">UGC &amp; Direct-Response Ad Video Editor</div>
+        <h1>Video Editor for<br>UGC &amp; <em>Direct-Response</em> Ads.</h1>
+        <p class="hero-sub">UGC &amp; Direct-Response Ads · Short-Form + Long-Form Content</p>
         <p class="hero-desc">
-          Three active YouTube channels built from zero — researching, scripting, editing,
-          packaging, and publishing across long-form cinematic storytelling, short-form sports
-          commentary, and competitive niche content.
+          I edit hook-driven, handheld-style UGC and direct-response ads for paid social feeds —
+          alongside three YouTube channels built from zero, spanning cinematic long-form
+          storytelling, short-form sports commentary, and competitive niche content.
         </p>
         <div class="cta-row">
-          <a href="#channels" class="btn btn-gold">View My Channels</a>
+          <a href="#ugc" class="btn btn-gold">View UGC/Ad Work</a>
           <a href="#contact" class="btn btn-outline">Get in Touch</a>
         </div>
         <div class="hero-stats">
+          <div class="stat"><strong>UGC + Ads</strong><span>New Specialization</span></div>
           <div class="stat"><strong>3</strong><span>Active Channels</span></div>
-          <div class="stat"><strong>Long + Short</strong><span>Format Range</span></div>
           <div class="stat"><strong>End-to-End</strong><span>Solo Producer</span></div>
         </div>
       </div>
@@ -468,16 +519,24 @@ footer span{color:var(--gold)}
           from validating an idea through research to publishing and reading the data afterward.
         </p>
         <p>
+          More recently, I've focused on <strong>UGC-style and direct-response ad editing</strong> —
+          candid, handheld-look product and testimonial edits for paid social feeds, combining
+          hook-driven short-form pacing with AI-assisted production pipelines (prompt engineering,
+          image-to-video workflows) to move faster from concept to finished ad.
+        </p>
+        <p>
           My channels span cinematic long-form storytelling, short-form sports commentary,
           and competitive niche entertainment — which means I know how to adapt tone, pacing,
           and format to serve completely different audiences.
         </p>
         <p>
-          A <strong>full stack development background</strong> gives me an edge most editors
-          don't have. I build production systems the same way I build software — structured,
-          repeatable, and designed to improve over time.
+          A <strong>full stack development and automation background</strong> gives me an edge
+          most editors don't have. I build production systems the same way I build software —
+          structured, repeatable, and designed to improve over time.
         </p>
         <div class="tag-row">
+          <span class="tag">UGC &amp; Direct-Response Ads</span>
+          <span class="tag">AI-Assisted Production</span>
           <span class="tag">Cebu, Philippines</span>
           <span class="tag">Open to Remote</span>
           <span class="tag">BS Information Technology</span>
@@ -495,8 +554,45 @@ footer span{color:var(--gold)}
         <div class="s-row"><span>Workflow Automation</span><span>n8n · GoHighLevel</span></div>
         <div class="s-row"><span>Channel Strategy</span><span>Research → Publish</span></div>
         <div class="s-row"><span>Full Stack Dev</span><span>React · Java · Python</span></div>
+        <div class="s-row"><span>UGC / Direct-Response Editing</span><span>Paid Social Ads</span></div>
+        <div class="s-row"><span>AI Image-to-Video Production</span><span>Prompt Engineering</span></div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- UGC / AD PROJECT -->
+<section id="ugc">
+  <div class="container">
+    <div class="label fi">Commercial / UGC Project</div>
+    <h2 class="s-title fi">Built for the scroll,<br>not the cinema.</h2>
+    <p class="s-sub fi">UGC and direct-response ad editing is a different discipline than YouTube storytelling — built for the first three seconds, not the first act. Here's a recent independent commercial project applying that discipline end-to-end.</p>
+
+    <div class="ugc-grid">
+      <div class="ugc-card fi">
+        <div class="ugc-head">
+          <div class="ugc-name">Independent UGC Video Production</div>
+          <div class="ugc-tag">Supplement / Consumer Product Ad</div>
+        </div>
+        <ul class="ugc-list">
+          <li>Produced UGC-style promotional content for consumer product marketing, generating AI image prompts tuned for a handheld, candid, authentic aesthetic suited to paid social feeds.</li>
+          <li>Built a two-step image-to-video production workflow — sourcing/generating still frames, then animating and editing them into finished short-form ad content.</li>
+          <li>Designed shot sequences and route/scene-based visual narratives, planning static-image concepts before motion production.</li>
+          <li>Edited the final cut with pacing, captions, and sound design optimized for scroll-stopping performance on paid social platforms.</li>
+        </ul>
+        <div class="ugc-tools">
+          <span class="ct">CapCut</span>
+          <span class="ct">Photoshop</span>
+          <span class="ct">Canva</span>
+          <span class="ct">ChatGPT</span>
+          <span class="ct">Claude</span>
+          <span class="ct">Google AI Studio</span>
+          <span class="ct">Nano Banana</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -725,6 +821,18 @@ footer span{color:var(--gold)}
 
     <div class="sk-grid">
       <div class="sk-card fi">
+        <div class="sk-icon">📱</div>
+        <div class="sk-name">UGC &amp; Direct-Response Ads</div>
+        <ul class="sk-list">
+          <li>UGC-Style / Handheld Product Ads</li>
+          <li>Short-Form Hook &amp; Retention Editing</li>
+          <li>Storyboard-to-Edit Process</li>
+          <li>AI Image-to-Video Workflows</li>
+          <li>Prompt Engineering for Ad Content</li>
+          <li>CTR-Focused Cover Frame Design</li>
+        </ul>
+      </div>
+      <div class="sk-card fi">
         <div class="sk-icon">🎬</div>
         <div class="sk-name">Video Production</div>
         <ul class="sk-list">
@@ -796,6 +904,18 @@ footer span{color:var(--gold)}
           <li>Multi-Format Content Strategy</li>
         </ul>
       </div>
+      <div class="sk-card fi">
+        <div class="sk-icon">🧰</div>
+        <div class="sk-name">Creative Tools</div>
+        <ul class="sk-list">
+          <li>CapCut</li>
+          <li>Adobe Photoshop</li>
+          <li>Canva</li>
+          <li>ChatGPT &amp; Claude</li>
+          <li>Google AI Studio</li>
+          <li>Nano Banana</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -857,6 +977,69 @@ footer span{color:var(--gold)}
 
 <div class="divider"></div>
 
+<!-- EXPERIENCE / EDUCATION / PROJECTS -->
+<section id="experience">
+  <div class="container">
+    <div class="label fi">Experience &amp; Background</div>
+    <h2 class="s-title fi">Beyond the edit.</h2>
+    <p class="s-sub fi">A technical and automation background most editors don't have — direct production leverage, not a side interest.</p>
+
+    <div class="exp-grid">
+      <div class="exp-block fi">
+        <div class="exp-role">Automation Specialist &amp; Web Scraper (Intern)</div>
+        <div class="exp-org">Metawatt — AI Innovation &amp; Automation Platform</div>
+        <div class="exp-date">Jan – Apr 2026</div>
+        <ul class="exp-list">
+          <li>Engineered automated web scrapers (Python, Playwright, Selenium, BeautifulSoup) to extract structured data feeding directly into CRM workflows.</li>
+          <li>Built multi-step GoHighLevel automation workflows and a full marketing funnel (Faithful Alliance) with lead capture, booking logic, and CRM integration.</li>
+          <li>Extended automation beyond native platform capabilities using webhooks and third-party integrations; documented systems via structured SOPs.</li>
+        </ul>
+      </div>
+
+      <div class="edu-col">
+        <div class="strengths fi">
+          <div class="strengths-head">Education</div>
+          <div class="s-row"><span>BS Information Technology · Cebu Institute of Technology</span><span>2021 – 2025</span></div>
+        </div>
+        <div class="strengths fi">
+          <div class="strengths-head">Certifications</div>
+          <div class="s-row"><span>AWS Cloud Foundation</span><span>AWS</span></div>
+          <div class="s-row"><span>AWS Cloud Architecting</span><span>AWS</span></div>
+          <div class="s-row"><span>Java Programming</span><span>Cert</span></div>
+          <div class="s-row"><span>MySQL</span><span>Cert</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-grid">
+      <div class="proj-card fi">
+        <div class="proj-name">Cinematic YouTube Content Production System</div>
+        <div class="proj-tag">Production · Storytelling · Content Strategy</div>
+        <p class="proj-desc">End-to-end production workflow covering research, scripting, editing, thumbnail creation, and publishing — built for repeatable, high-quality output across productions.</p>
+      </div>
+      <div class="proj-card fi">
+        <div class="proj-name">Cinematic Visual Prompt Engine</div>
+        <div class="proj-tag">AI Shot-Sequence Production System</div>
+        <p class="proj-desc">A structured, multi-phase shot-and-scene prompt system for narrative video production, with locked style descriptors and character placeholders — the same approach applied to ad and UGC content.</p>
+      </div>
+      <div class="proj-card fi">
+        <div class="proj-name">GHL Lead Recovery Automation</div>
+        <div class="proj-tag">CRM Automation Case Study</div>
+        <p class="proj-desc">End-to-end CRM automation case study with a public write-up and video walkthrough demonstrating conditional branching and lead segmentation logic.</p>
+        <a href="https://ciddysed.github.io/lead-recovery-portfolio" target="_blank" class="proj-link">View Case Study ↗</a>
+      </div>
+      <div class="proj-card fi">
+        <div class="proj-name">SleepSync</div>
+        <div class="proj-tag">Full Stack Wellness App · React · Spring Boot · MySQL</div>
+        <p class="proj-desc">Solo-built application; owned end-to-end product design and development from architecture through deployment.</p>
+        <a href="https://sleepsyncapp.netlify.app" target="_blank" class="proj-link">Visit App ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="container">
@@ -868,6 +1051,11 @@ footer span{color:var(--gold)}
         <a href="mailto:zed.maxcapinlac@gmail.com" class="cl">
           <span class="cl-ic">✉️</span>
           <span class="cl-label">zed.maxcapinlac@gmail.com</span>
+          <span class="cl-arr">↗</span>
+        </a>
+        <a href="tel:+639939174342" class="cl">
+          <span class="cl-ic">📞</span>
+          <span class="cl-label">0993-917-4342</span>
           <span class="cl-arr">↗</span>
         </a>
         <a href="https://www.linkedin.com/in/ciddy-macapinlac-580a1432a/" target="_blank" class="cl">
